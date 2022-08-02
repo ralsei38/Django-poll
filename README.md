@@ -34,3 +34,13 @@ python manage.py runserver 8080
 ```python
 from django.http import HttpResponse #to return basic views
 from django.urls import path #so you can map stuff in app's urls.py
+
+python manage.py makemigrations #to create migrations for those changes
+python manage.py migrate #to apply those changes to the database.
+```
+
+## CLI memo
+```python
+Foo.objects.all() # list all object instanciated using the Foo class
+Foo.objects.filter(id=1) # same as before, but filtering
+Foo.objects.filter(question_text__startswith='What')
